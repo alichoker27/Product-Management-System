@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Management System</title>
+    <link rel="stylesheet" href="Management.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h1>Product management System</h1>
+      </div>
+      <div class="inputs">
+        <input placeholder="Title" type="text" id="title" />
+        <div class="price">
+          <input
+            onkeyup="getTotal()"
+            placeholder="Price"
+            type="number"
+            id="price"
+          />
+          <input
+            onkeyup="getTotal()"
+            placeholder="Taxes"
+            type="number"
+            id="taxes"
+          />
+          <input
+            onkeyup="getTotal()"
+            placeholder="ADS"
+            type="number"
+            id="ads"
+          />
+          <input
+            onkeyup="getTotal()"
+            placeholder="Discount"
+            type="number"
+            id="discount"
+          />
+          <small id="total"></small>
+        </div>
+        <input placeholder="Count" type="number" id="count" />
+        <input placeholder="Category" type="text" id="category" />
+        <button id="submit">Create</button>
+      </div>
+      <div class="outputs">
+        <div class="searchBlock">
+          <input
+            onkeyup="searchData(this.value)"
+            placeholder="Search"
+            type="text"
+            id="search"
+          />
+          <div class="BtnSearch">
+            <button onclick="getSearchMood(this.id)" id="SearchTitle">
+              Seacrh by title
+            </button>
+            <button onclick="getSearchMood(this.id)" id="SearchCategory">
+              Seacrh by Category
+            </button>
+          </div>
+        </div>
+
+        <table>
+          <div id="deleteAll"></div>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class=""></div>
+    </div>
+    <script src="Management.js"></script>
+  </body>
+</html>
